@@ -19,6 +19,6 @@ then
 fi;
 
 /usr/sbin/userdel -r -f $1
-#/usr/sbin/groupdel $1
+/usr/sbin/groupdel $1
 
 exit 0;

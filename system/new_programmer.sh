@@ -26,9 +26,6 @@ then
     exit 1
 fi;
 
-/usr/sbin/useradd -m -d /home/e-mails/$1 -s /sbin/nologin -c "$2" $1
+/usr/sbin/useradd -m -s /bin/bash -c "$2" $1
 passwd $1
-
-vi /etc/postfix/virtual
-/usr/sbin/postmap /etc/postfix/virtual
-/etc/init.d/postfix restart
+chage -d0 $1 

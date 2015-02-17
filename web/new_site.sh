@@ -36,7 +36,7 @@ fi;
 HOME_TEMPLATE=/home/www/$1
 
 /usr/sbin/useradd -m -d $HOME_TEMPLATE -s /bin/bash -c "$2" $1
-mkdir $HOME_TEMPLATE/php
+mkdir $HOME_TEMPLATE/app
 mkdir $HOME_TEMPLATE/log
 chown -R $1:$1 $HOME_TEMPLATE
 chmod 770 $HOME_TEMPLATE

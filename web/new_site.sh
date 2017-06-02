@@ -39,7 +39,7 @@ HOME_TEMPLATE=/home/www/$1
 mkdir $HOME_TEMPLATE/app
 mkdir $HOME_TEMPLATE/log
 chown -R $1:$1 $HOME_TEMPLATE
-chmod 770 $HOME_TEMPLATE
+chmod 750 $HOME_TEMPLATE
 usermod -a -G $1 nginx
 #passwd $1
 
